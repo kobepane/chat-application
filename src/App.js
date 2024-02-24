@@ -1,12 +1,15 @@
-import logo from "./logo.svg";
-import "./App.css";
+// import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Login } from "./login";
+import { Chat } from "./chat";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <h1>I need you please to work</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/Chat" element={<Chat />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
