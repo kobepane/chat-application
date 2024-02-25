@@ -1,27 +1,16 @@
+/*
+Login component for the chat application
+*/
+
 import "./login.css";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Login() {
-  const [username, setUsername] = useState("");
-  const [country, setCountry] = useState("");
-  const [chat, setChat] = useState("");
+function Login(props) {
+  // Destructure passed in state variables and handler functions
+  const { username, country, chat, changeUsername, changeCountry, changeChat } =
+    props;
+
   const navigate = useNavigate();
-
-  function changeUsername(e) {
-    setUsername(e.target.value);
-  }
-
-  function changeCountry(e) {
-    setCountry(e.target.value);
-  }
-
-  function changeChat(e) {
-    setChat(e.target.value);
-  }
-  console.log(username);
-  console.log(country);
-  console.log(chat);
 
   return (
     <div className="login">
