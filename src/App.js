@@ -42,7 +42,7 @@ export default function App() {
         />
         <Route
           path="/Chat"
-          element={<Chat username={username} country={country} />}
+          element={<Chat username={username} country={country} chat={chat} />}
         />
       </Routes>
     </BrowserRouter>
