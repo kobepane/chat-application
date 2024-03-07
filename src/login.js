@@ -35,6 +35,7 @@ function Login(props) {
         </select>
       </div>
       <button
+        id="join-button"
         className="joinButton"
         onClick={() => {
           navigate("/Chat");

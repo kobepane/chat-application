@@ -1,26 +1,46 @@
-body {
-    font-family: Arial, sans-serif;
+.container {
     margin: 0;
     padding: 0;
-}
-
-.container {
+    border: 1px solid;
     display: flex;
+    flex: 1;
     height: 100vh;
 }
 
-.users-list {
-    flex: 1;
-    background-color: #f0f0f0;
-    padding: 20px;
+.item {
+    border: 1px solid;
 }
 
-.chat-messages {
-    flex: 6;
-    background-color: #fff;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    padding: 20px;
-    overflow-y: auto;
+.users {
+    flex-basis: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.user-list-parent {
+    margin: 40px;
+}
+
+#leave-button {
+    margin: 20px;
+    padding: 10px;
+    background-color: #b30000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#leave-button:hover {
+    background-color: #800000;
+}
+
+.chat {
+    flex-basis: 64%;
+}
+
+.chart {
+    flex-basis: 18%;
+}
