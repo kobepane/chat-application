@@ -3,15 +3,10 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Login } from "./login";
 import { Chat } from "./chat";
+import { example_users } from "./sampleData";
 
 // Creating an example array of user objects that we would query from the database each time a new user joins a chat.
 // each user object is also what would be created for each user, with a username and country attribute.
-
-const example_users = [
-  { username: "kobepane14", country: "USA" },
-  { username: "JohnDeere182", country: "Canada" },
-  { username: "ElPresidente", country: "Mexico" },
-];
 
 export default function App() {
   // Declare state variables and functions to be passed down into Login component; then lifted back into App component;

@@ -7,9 +7,11 @@
     height: 100vh;
 }
 
+
 .item {
     border: 1px solid;
 }
+
 
 .users {
     flex-basis: 18%;
@@ -38,9 +40,65 @@
 }
 
 .chat {
-    flex-basis: 64%;
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
+
+.chat-header {
+    width: 100%;
+    flex-basis: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.chat-messages {
+    width: 100%;
+    flex-basis: 80%;
+}
+
+.chat-textbox {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-basis: 10%;
+    align-items: center;
+}
+
+.chat-inputbox {
+    flex-basis: 80%;
+    width: 100%;
+    height: 100%;
+}
+
+.send-button-div {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#send-button {
+    height: 35px;
+    width: 40%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
 }
 
 .chart {
-    flex-basis: 18%;
+    flex-basis: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

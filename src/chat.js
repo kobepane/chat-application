@@ -4,6 +4,7 @@ Chat component for the chat application
 
 import "./chat.css";
 import { useNavigate } from "react-router-dom";
+import Example from "./piechart";
 
 function Chat(props) {
   const { username, country, chat, example_users } = props;
@@ -31,8 +32,24 @@ function Chat(props) {
             Leave Chat
           </button>
         </div>
-        <div className="item chat">Chat</div>
-        <div className="item chart">Chart</div>
+        <div className="item chat">
+          <div className="chat-header item">
+            <h2>Chat Name</h2>
+          </div>
+          <div className="chat-messages item">Chat Messages</div>
+          <div className="chat-textbox item">
+            <textarea
+              placeholder="Type a message..."
+              className="chat-inputbox item"
+            />
+            <div className="send-button-div">
+              <button id="send-button">Send</button>
+            </div>
+          </div>
+        </div>
+        <div className="item chart">
+          <Example />
+        </div>
       </div>
     </div>
   );
