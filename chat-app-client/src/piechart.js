@@ -69,7 +69,7 @@ const renderActiveShape = (props) => {
         textAnchor={textAnchor}
         fill="#999"
       >
-        {`${(percent * 100).toFixed(0)}%)`}
+        {/*`${(percent * 100).toFixed(0)}%)`*/}
       </text>
     </g>
   );

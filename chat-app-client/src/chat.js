@@ -38,8 +38,21 @@ function Chat(props) {
 
   // Handle button click, and send message data to server
   function sendMessage() {
-    socket.emit("message-to-server", message);
+    const messageObj = { message: message, user: username };
+    socket.emit("message-to-server", messageObj);
     setMessage("");
+  }
+
+  // Handle enter/return clicked by user in the text area to send message to server
+  function handleEnterKeyPress(e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  }
+
+  function handleLeaveChat() {
+    navigate("/");
   }
 
   // Initialize the connection, and listen for for messages from the server
@@ -70,12 +83,7 @@ function Chat(props) {
               })}
             </div>
           </div>
-          <button
-            id="leave-button"
-            onClick={() => {
-              navigate("/");
-            }}
-          >
+          <button id="leave-button" onClick={handleLeaveChat}>
             Leave Chat
           </button>
         </div>
@@ -85,7 +93,16 @@ function Chat(props) {
           </div>
           <div className="chat-messages item">
             {chatMessages.map((message, index) => {
-              return <p key={index}>{message}</p>;
+              return (
+                <p
+                  key={index}
+                  className={`message ${
+                    message.user === username ? "sent" : "received"
+                  }`}
+                >
+                  {message.message}
+                </p>
+              );
             })}
           </div>
           <div className="chat-textbox item">
@@ -94,6 +111,7 @@ function Chat(props) {
               placeholder="Type a message..."
               className="chat-inputbox item"
               onChange={handleTextChange}
+              onKeyDown={handleEnterKeyPress}
             />
             <div className="send-button-div">
               <button id="send-button" onClick={sendMessage}>

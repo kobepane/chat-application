@@ -59,7 +59,19 @@ select {
     text-align: center;
 }
 
-.input-container input {
+.larger-input {
     display: inline-block;
     text-align: center;
+    width: 100%;
+    /* Adjust the width as needed */
+    max-width: 300px;
+    /* Optionally, set a maximum width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.larger-input::placeholder {
+    font-size: 92%;
 }
