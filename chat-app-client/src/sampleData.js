@@ -5,10 +5,9 @@ const example_users = [
 ];
 
 const data = [
-  { name: "USA", value: 4 },
-  { name: "Canada", value: 3 },
-  { name: "Mexico", value: 3 },
-  { name: "Greenland", value: 2 },
+  { name: "Chat 1", value: 1 },
+  { name: "Chat 2", value: 2 },
+  { name: "Chat 3", value: 3 },
 ];
 
 const example_messages = [

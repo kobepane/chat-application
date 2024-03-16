@@ -170,15 +170,6 @@
     justify-content: center;
 }
 
-.chat-messages {
-    width: 100%;
-    max-width: 100%;
-    flex-basis: 80%;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-}
-
 .chat-messages p {
     margin-bottom: 10px;
 }
@@ -235,6 +226,15 @@
 }
 
 /* Testing chat bubbles */
+.chat-messages {
+    width: 100%;
+    max-width: 100%;
+    flex-basis: 80%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .message {
     max-width: 70%;
     word-wrap: break-word;
@@ -251,7 +251,6 @@
 
 .received.message {
     margin-right: auto;
-    /* Adjusted */
     background-color: #eee;
     position: relative;
 }
@@ -287,7 +286,6 @@
 .sent.message {
     color: white;
     margin-left: auto;
-    /* Adjusted */
     background: linear-gradient(to bottom, #4caf50 0%, #4caf50 100%);
     background-attachment: fixed;
     position: relative;
@@ -319,8 +317,7 @@
     border-bottom-left-radius: 10px;
 } 
 
-/*Testing username */
-.username-on-message {
-    padding: 1.2%;
-    font-size: 85%;
+.span-username {
+    font-size: 70%;
+    font-family: "Roboto Mono", monospace;
 }

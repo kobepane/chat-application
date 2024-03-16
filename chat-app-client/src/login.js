@@ -45,9 +45,9 @@ function Login(props) {
         <label>Pick a Chat</label>
         <select value={chat} name="selectChat" onChange={changeChat}>
           <option value="none-selected">-- Select a Chat --</option>
-          <option value="option1">Chat 1</option>
-          <option value="option2">Chat 2</option>
-          <option value="option3">Chat 3</option>
+          <option value="Chat 1">Chat 1</option>
+          <option value="Chat 2">Chat 2</option>
+          <option value="Chat 3">Chat 3</option>
         </select>
       </div>
       <button
