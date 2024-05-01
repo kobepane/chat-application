@@ -1,5 +1,6 @@
 /*
 Chat component for the chat application
+Testing, Testing
 */
 
 import "./chat.css";
