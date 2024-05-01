@@ -131,8 +131,8 @@ function Chat(props) {
           <div className="user-list-parent">
             <h2 className="users-header">Users({usersInChat.length})</h2>
             <div className="users-list">
-              {usersInChat.map((user) => {
-                return <p>{user}</p>;
+              {usersInChat.map((user, index) => {
+                return <p key={index}>{user}</p>;
               })}
             </div>
           </div>
